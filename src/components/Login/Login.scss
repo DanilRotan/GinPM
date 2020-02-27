@@ -1,0 +1,101 @@
+.Login {
+  $orange: #e9432b;
+
+  background: #4b4b96;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login-body {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 50px 65px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(#000, 0.1);
+    border-radius: 10px;
+    @media (max-width: 670px) {
+      width: 500px;
+    }
+    @media (max-width: 550px) {
+      width: 350px;
+    }
+    .title-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      img {
+        width: 150px;
+        @media (max-width: 550px) {
+          width: 100px;
+        }
+      }
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 0 40px;
+
+      button {
+        width: 100px;
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: #000;
+        cursor: pointer;
+        outline: none;
+        @media (max-width: 550px) {
+          font-size: 15px;
+        }
+        &.active {
+          color: $orange;
+        }
+      }
+      .login-pipe {
+        width: 1px;
+        height: 15px;
+        margin: 0 40px;
+        background: #000;
+        @media (max-width: 550px) {
+          width: 0px;
+        }
+      }
+    }
+    .login-wrapper {
+      input {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 0 20px;
+        border: none;
+        border-bottom: 1px solid #9f9f9f;
+        font-size: 14px;
+        padding: 10px 0;
+        outline: none;
+      }
+      .btn-submit {
+        width: 200px;
+        display: block;
+        margin: 40px auto 0;
+        padding: 10px 20px;
+        border: 2px solid #111163;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #111163;
+        outline: none;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          color: white;
+          background: #111163;
+          transform: scale(1.1);
+          box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+}

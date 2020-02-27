@@ -1,0 +1,36 @@
+.navigation {
+  height: 80px;
+  min-height: 80px;
+  border-top: 1px solid #4e484680;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .link {
+    width: 130px;
+    height: 60px;
+    background: #4b4b96;
+    border-top: 2px solid #e9432b;
+    border-right: 2px solid #e9432b;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+    @media (max-width: 1250px) {
+      width: 50px;
+    }
+    img {
+      width: 35px;
+      @media (max-width: 1250px) {
+        width: 25px;
+      }
+    }
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 3px 3px 8px 0px #a1a1a5;
+    }
+  }
+}

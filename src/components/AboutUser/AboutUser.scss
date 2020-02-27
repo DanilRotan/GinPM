@@ -1,0 +1,106 @@
+.about-user-conteiner {
+  padding: 20px;
+  border-radius: 20px 20px 20px 20px;
+  border-right: 3px solid #e9432b;
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.151);
+  position: absolute;
+  top: 50px;
+  right: -115px;
+  z-index: 6;
+  width: 350px;
+  height: 400px;
+  background: white;
+  display: none;
+  @media (max-width: 750px) {
+    right: -170px;
+  }
+  @media (max-width: 480px) {
+    width: 250px;
+    height: 300px;
+    right: -115px;
+  }
+  .user_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .user-info_wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      .user-avatar {
+        width: 100px;
+        height: 100px;
+        background: #a1a1a5;
+        border-radius: 50%;
+        cursor: pointer;
+        @media (max-width: 480px) {
+          width: 70px;
+          height: 70px;
+        }
+        p {
+          margin: 0;
+          color: #4b4b96;
+          font-size: 30px;
+          font-weight: bold;
+          text-align: center;
+          line-height: 100px;
+          font-family: "Seymour One", sans-serif;
+          @media (max-width: 480px) {
+            line-height: 70px;
+            font-size: 18px;
+          }
+        }
+      }
+      .other-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        h1 {
+          color: #4e4846;
+          margin-bottom: 10px;
+          @media (max-width: 480px) {
+            font-size: 20px;
+          }
+        }
+        .user-name {
+          color: rgb(150, 150, 150);
+          margin-bottom: 10px;
+        }
+        .user_email {
+          font-weight: bold;
+          color: #4e4846;
+        }
+      }
+    }
+    .exit_button {
+      margin-top: 80px;
+      @media (max-width: 480px) {
+        margin-top: 50px;
+      }
+      button {
+        background: #111163;
+        width: 150px;
+        height: 30px;
+        font-size: 16px;
+        border: none;
+        color: white;
+        border: 2px solid #111163;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        outline: none;
+        transition: 0.5s;
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+  }
+}
+.active {
+  display: block;
+}

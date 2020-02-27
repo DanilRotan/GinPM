@@ -1,0 +1,263 @@
+.messages {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #f2f0f4;
+  padding: 0 150px 0 30px;
+  @media (max-width: 1250px) {
+    padding: 0 100px 0 20px;
+  }
+  @media (max-width: 750px) {
+    padding: 0 50px 0 15px;
+  }
+  @media (max-width: 550px) {
+    padding: 0 10px 0 10px;
+  }
+  .messages-title {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #4e484680;
+    @media (max-width: 570px) {
+      padding: 10px 0;
+    }
+    .user_info_wrap {
+      display: flex;
+      align-items: center;
+      .avatar {
+        width: 80px;
+        height: 80px;
+        background: #a1a1a5;
+        border-radius: 50%;
+        margin-right: 10px;
+        cursor: pointer;
+        @media (max-width: 570px) {
+          width: 60px;
+          min-width: 60px;
+          height: 60px;
+        }
+        p {
+          font-size: 22px;
+          color: #4b4b96;
+          font-weight: bold;
+          text-align: center;
+          line-height: 80px;
+          font-family: "Seymour One", sans-serif;
+          @media (max-width: 570px) {
+            font-size: 18px;
+            line-height: 60px;
+          }
+        }
+      }
+      .title_name_wrap {
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 570px) {
+          display: none;
+        }
+        h1 {
+          color: #423d3b;
+          cursor: pointer;
+          font-size: 25px;
+        }
+        p {
+          font-size: 16px;
+          color: #e9432b;
+        }
+      }
+    }
+    .chat_menu {
+      position: relative;
+      margin-right: 20px;
+      cursor: pointer;
+      img {
+        width: 15px;
+      }
+    }
+  }
+  .messages-section {
+    flex-grow: 1;
+    overflow: auto;
+    padding-top: 10px;
+    .messages-right {
+      display: flex;
+      justify-content: flex-end;
+      padding-bottom: 10px;
+      .messages-conteiner {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row-reverse;
+        position: relative;
+        .message {
+          display: flex;
+          flex-direction: column;
+          max-width: 500px;
+          background: #4b4b96;
+          border-radius: 15px 15px 0 15px;
+          padding: 10px 10px;
+          display: flex;
+          p {
+            font-size: 16px;
+            color: white;
+          }
+          .data-time {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 5px;
+            color: white;
+            font-size: 12px;
+          }
+        }
+        .active {
+          transform: translateX(-20px);
+          border-left: 3px solid #e9432b;
+        }
+        .avatar {
+          width: 40px;
+          min-width: 40px;
+          height: 40px;
+          background: #a1a1a5;
+          border-radius: 50%;
+          margin-left: 10px;
+          cursor: pointer;
+          @media (max-width: 570px) {
+            width: 25px;
+            min-width: 25px;
+            height: 25px;
+            margin-right: 5px;
+          }
+          p {
+            color: #4b4b96;
+            font-weight: bold;
+            text-align: center;
+            line-height: 40px;
+            font-family: "Seymour One", sans-serif;
+            @media (max-width: 570px) {
+              font-size: 12px;
+              line-height: 25px;
+            }
+          }
+        }
+        .delete-button {
+          position: absolute;
+          left: -9px;
+          bottom: -9px;
+          padding: 0 5px 0 5px;
+          display: none;
+          img {
+            width: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+        &:hover .delete-button {
+          display: block;
+        }
+      }
+    }
+    .messages-left {
+      display: flex;
+      justify-content: flex-start;
+      padding-bottom: 10px;
+
+      .messages-conteiner {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        .message {
+          display: flex;
+          flex-direction: column;
+          max-width: 500px;
+          background: white;
+          border-radius: 15px 15px 15px 0;
+          padding: 10px 10px;
+          display: flex;
+          p {
+            font-size: 16px;
+            color: #4e4846;
+          }
+          .data-time {
+            margin-top: 5px;
+            color: #4e4846;
+            font-size: 12px;
+          }
+        }
+        .active {
+          transform: translateX(20px);
+          border-right: 3px solid #e9432b;
+        }
+        .avatar {
+          width: 40px;
+          min-width: 40px;
+          height: 40px;
+          background: #a1a1a5;
+          border-radius: 50%;
+          margin-right: 10px;
+          cursor: pointer;
+          @media (max-width: 570px) {
+            width: 25px;
+            min-width: 25px;
+            height: 25px;
+            margin-right: 5px;
+          }
+          p {
+            color: #4b4b96;
+            font-weight: bold;
+            text-align: center;
+            line-height: 40px;
+            font-family: "Seymour One", sans-serif;
+            @media (max-width: 570px) {
+              font-size: 12px;
+              line-height: 25px;
+            }
+          }
+        }
+        .delete-button {
+          position: absolute;
+          right: -9px;
+          bottom: -9px;
+          padding: 0 5px 0 5px;
+          display: none;
+          img {
+            width: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+        &:hover .delete-button {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .top-border {
+    padding-top: 89px;
+  }
+  .clean-message-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      opacity: 0.6;
+      width: 50px;
+      padding: 10px;
+    }
+    p {
+      color: #4e4846;
+    }
+  }
+}

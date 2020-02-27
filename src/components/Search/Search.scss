@@ -1,0 +1,22 @@
+.chats-search {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #4e484680;
+  width: 100%;
+  .search-icon {
+    padding: 0 0 0 10px;
+    img {
+      width: 15px;
+    }
+  }
+  .search {
+    color: #4e4846;
+    background: none;
+    border: none;
+    outline: none;
+    height: 60px;
+    width: 100%;
+    font-size: 15px;
+    padding-left: 5px;
+  }
+}

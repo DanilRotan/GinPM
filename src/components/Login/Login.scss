@@ -28,8 +28,10 @@
       margin-bottom: 30px;
       img {
         width: 150px;
+        height: 83px;
         @media (max-width: 550px) {
           width: 100px;
+          height: 60px;
         }
       }
     }
